@@ -3,9 +3,9 @@ package oopMostenire;
 public class Sportiv extends Persoana{
 
 
-    public String sport;
-    public String echipa;
-    public int numarTricou;
+    private String sport;
+    private String echipa;
+    private int numarTricou;
 
     public Sportiv(String nume, String prenume, int varsta, String adresa, String sport, String echipa, int numarTricou){
         super(nume, prenume, varsta, adresa);
@@ -19,5 +19,37 @@ public class Sportiv extends Persoana{
         System.out.println("Sportul practicat de sportiv este " + sport);
         System.out.println("Echipa sportivului este " + echipa);
         System.out.println("Numarul tricoului sportivului este " + numarTricou);
+    }
+
+
+    // Polimorfism dinamic
+    @Override
+    public void mananca() {
+        System.out.println(" Sportivul mananca intre antrenamente.");
+    }
+
+    // Metode getter si setter
+    public String getSport() {
+        return sport;
+    }
+
+    public void setSport(String sport) {
+        this.sport = sport;
+    }
+
+    public String getEchipa() {
+        return echipa;
+    }
+
+    public void setEchipa(String echipa) {
+        this.echipa = echipa;
+    }
+
+    public int getNumarTricou() {
+        return numarTricou;
+    }
+
+    public void setNumarTricou(int numarTricou) {
+        this.numarTricou = numarTricou;
     }
 }

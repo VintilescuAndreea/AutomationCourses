@@ -2,10 +2,10 @@ package oopMostenire;
 
 public class Angajat extends Persoana{
 
-    public String firma;
-    public double salariu;
-    public String contract;
-    public int zileLibere;
+    private String firma;
+    private double salariu;
+    private String contract;
+    private int zileLibere;
 
     public Angajat( String nume, String prenume, int varsta, String adresa , String firma, double salariu, String contract, int zileLibere){
         super(nume, prenume, varsta, adresa);
@@ -22,6 +22,54 @@ public class Angajat extends Persoana{
         System.out.println("Contractul angajatului este " + contract);
         System.out.println("Zilele libere ale angajatului sunt " + zileLibere);
     }
+    // Polimorfism dinamic
 
+    @Override
+    public void mananca() {
+        System.out.println(" Angajatul  mananca in pauza de masa la birou.");
     }
+
+    // Polimorfism static - metoda fara parametrii
+
+    public void afiseazaDetalii(){
+        System.out.println("Afisez toti angajatii companiei " + firma);
+    }
+
+    public void afiseazaDetalii(String firma){
+        System.out.println("Afisez angajatii din compania" + firma);
+    }
+
+    public void afiseazaDetalii(String firma, boolean contract){
+        System.out.println("Afisez angajatii din compania " + firma + " cu contract " + contract);
+    }
+
+    // Metode getter si setter
+    public String getFirma() {
+        return firma;
+    }
+
+    public double getSalariu() {
+        return salariu;
+    }
+
+    public String getContract() {
+        return contract;
+    }
+
+    public int getZileLibere() {
+        return zileLibere;
+    }
+
+    public void setFirma(String firma) {
+        this.firma = firma;
+    }
+
+    public void setContract(String contract) {
+        this.contract = contract;
+    }
+
+    public void setZileLibere(int zileLibere) {
+        this.zileLibere = zileLibere;
+    }
+}
 

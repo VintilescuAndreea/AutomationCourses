@@ -23,6 +23,12 @@ public class Persoana {
         System.out.println("Adresa persoanei este  " + adresa);
     }
 
+
+    // Polimorfism dinamic
+     public void mananca() {
+         System.out.println(prenume + " " + nume + " mananca atunci cand ii este foame.");
+     }
+
     // Metode getter - folositepentru a accesa atributele private
     public String getPrenume() {
         return prenume;
@@ -69,9 +75,45 @@ mentinerea integritatii datelor si la reducerea complexitatii. Incapsularea se r
 3. Polimorfismul (Polymorphism): Polimorfismul permite obiectelor de diferite clase sa fie tratate ca obiecte ale unei clase comune.
     Acest principiu permite metodei sa se comporte diferit in functie de tipul obiectului care o apeleaza, facilitand astfel flexibilitatea
     si extensibilitatea codului.
+    Polimorfismul reprezinta conceptul prin care o metoda poate avea implementari diferite.
+    Este de doua tipuri: static (OVERLOAD - la compilare) si dinamic (OVERRIDE - la rulare).
+
+        Polimorfismul dinamic se realizeaza prin suprascrierea (override) metodelor din clasa parinte in clasa copil. O metoda poate
+        avea implementari diferite. Suprascrierea se face folosind anotarea @Override deasupra metodei din clasa copil.
+        Acesta se regaseste doar atunci cand exista mostenire intre clase.
+
+        Polimorfis
+
+
 
 4. Abstracția (Abstraction): Abstracția se refera la procesul de a simplifica complexitatea prin ascunderea detaliilor neesențiale si
     expunerea doar a caracteristicilor relevante ale unui obiect. Acest principiu ajuta la crearea de modele conceptuale care sunt mai usor
     de inteles si de utilizat.
 
+ */
+
+/*
+ Utilizarea metodelor getter si setter specifice atributelor private ale unei clase pt. principiul incapsularii:
+
+    Metodele getter sunt utilizate pentru a accesa valorile atributelor private ale unei clase din exteriorul acesteia.
+ Aceste metode sunt folosite pentru a obtine (a "primi") valoarea unui atribut fara a permite accesul direct la acesta.
+ Metodele getter sunt de obicei publice si au un nume care incepe cu "get", urmat de numele atributului cu prima litera majuscula.
+
+ Exemplu de metoda getter:
+ public String getNume() {
+     return nume;
+ }
+
+ Metodele setter sunt utilizate pentru a modifica valorile atributelor private ale unei clase din exteriorul acesteia.
+ Aceste metode permit setarea (a "stabili") unei noi valori pentru un atribut, oferind astfel un control asupra modului in care
+ valorile sunt modificate. Metodele setter sunt de obicei publice si au un nume care incepe cu "set", urmat de numele atributului
+ cu prima litera majuscula.
+
+ Exemplu de metoda setter:
+ public void setNume(String nume) {
+     this.nume = nume;
+ }
+
+ Utilizarea metodelor getter si setter este o practica comuna in programarea orientata pe obiecte, deoarece ajuta la mentinerea
+ incapsularii si la protejarea integritatii datelor unui obiect.
  */
