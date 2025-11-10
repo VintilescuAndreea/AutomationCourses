@@ -2,10 +2,12 @@ package oopMostenire;
 
 public class Persoana {
 
-    public String nume;
-    public String prenume;
-    public int varsta;
-    public String adresa;
+    private String nume;
+    private String prenume;
+    private int varsta;
+    private String adresa;
+
+
 
     public Persoana(String nume, String prenume, int varsta, String adresa) {
         this.nume = nume;
@@ -21,6 +23,35 @@ public class Persoana {
         System.out.println("Adresa persoanei este  " + adresa);
     }
 
+    // Metode getter - folositepentru a accesa atributele private
+    public String getPrenume() {
+        return prenume;
+    }
+
+    public String getAdresa() {
+        return adresa;
+    }
+
+    public int getVarsta() {
+        return varsta;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    // Metode setter - folosite pentru a modifica atributele private
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public void setVarsta(int varsta) {
+        this.varsta = varsta;
+    }
+
+    public void setAdresa(String adresa) {
+        this.adresa = adresa;
+    }
 }
 /* Cele 4 principii de baza ale programarii orientate pe obiecte (OOP) sunt:
 
